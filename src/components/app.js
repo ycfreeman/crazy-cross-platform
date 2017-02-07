@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { ping } from '../actions';
+import styleSheet from './styles';
 
 export default ({ isPinging, ping }) => (
-    <div>
-        <h1>is pinging: {isPinging.toString()}</h1>
-        <button onClick={ping}>Start PING</button>
+    <div style={styleSheet.container}>
+        <h1 style={styleSheet.welcome}>is pinging: {isPinging.toString()}</h1>
+        <p style={styleSheet.instructions}><button onClick={ping}>Start</button></p>
     </div>
 );
