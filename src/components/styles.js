@@ -3,10 +3,10 @@ export default {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#ddeeff',
     },
     welcome: {
-        fontSize: 20,
+        fontSize: 40,
         textAlign: 'center',
         margin: 10,
     },
