@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -19,10 +20,17 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react'],
+                    plugins: [
+                        "syntax-flow"
+                    ],
                     // ignore .babelrc for webpack build
                     babelrc: false
                 },
             }
         ]
-    }
+    },
+
+    plugins: [
+        new FlowBabelWebpackPlugin()
+    ]
 };

@@ -1,5 +1,9 @@
 {
   "presets": [
+    "react",
     "react-native"
+  ],
+  "plugins": [
+    "syntax-flow"
   ]
 }

@@ -1,16 +1,16 @@
+// @flow
+
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import { ping } from './actions';
 
 import app from './components/app';
+import { PingPongState } from './state';
 
 export const App = connect(
-    (state) => {
-        if (!state.hasOwnProperty('isPinging')) {
-            return {isPinging: false}
-        } else {
-            return state
-        }
+    (state: PingPongState): PingPongState => {
+        return _.defaults(state, { isPinging: false });
     },
     {ping}
 )(app);
